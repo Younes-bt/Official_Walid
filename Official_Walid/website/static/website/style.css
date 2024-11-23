@@ -2,3 +2,26 @@ body {
     background-color: black;
     color: antiquewhite;
 }
+
+/*
+.bi-facebook:hover {
+    color: blue !important;
+    background-color: white;
+}
+*/
+
+.nav-fb:hover {
+    background-color: #1877F2 !important;
+}
+
+.nav-ws:hover {
+    background-color: #25D366 !important;
+}
+
+.nav-yt:hover {
+    background-color: #FF0000 !important;
+}
+
+.nav-ig:hover {
+    background-color: #E1306C !important;
+}
