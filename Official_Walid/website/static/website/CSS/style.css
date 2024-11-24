@@ -5,20 +5,20 @@ body {
 /* fonts */
 @font-face {
     font-family: 'Diwani';
-    src: url('./fonts/arfonts-samt-7017.ttf') format('truetype');
+    src: url('../fonts/arfonts-samt-7017.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Maghribi';
-    src: url('./fonts/maghribi.ttf') format('truetype');
+    src: url('../fonts/maghribi.ttf') format('truetype');
 }
 @font-face {
     font-family: 'arabic-hand';
-    src: url('./fonts/hand-arabic.ttf') format('truetype');
+    src: url('../fonts/hand-arabic.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'arabic-pro';
-    src: url('./fonts/arabic-pro.ttf') format('truetype');
+    src: url('../fonts/arabic-pro.ttf') format('truetype');
 }
 /* end Fonts*/
 
@@ -57,11 +57,11 @@ body {
 .banner {
     background-image: url(https://res.cloudinary.com/daeuundyc/image/upload/v1732377418/Walid_Project/banner-background.png);
     color: aliceblue !important;
-    padding: 0px;
+    padding: 2rem 0rem;
 }
 
 .banner-img-area {
-    height: 80dvh;
+
     width: 100%;
     object-fit: cover;
     position: relative;
@@ -105,7 +105,7 @@ body {
 .banner-mobile {
     background-image: url(https://res.cloudinary.com/daeuundyc/image/upload/v1732377418/Walid_Project/banner-background.png);
     color: aliceblue !important;
-    height: 90dvh !important;
+
 }
 
 .banner-img-mobile {
@@ -135,7 +135,7 @@ body {
 /* section-articles */
 
 
-.section-articles-title {
+.section-articles-title, .section-bio {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -189,5 +189,49 @@ body {
 
 .card-title {
     font-family: 'arabic-pro', sans-serif !important;
+}
 
+.btn-more {
+    background-color: #FB8500 !important;
+    font-family: 'Alexandria', sans-serif !important;
+    color: #f1f1f1 !important;
+    font-size: 1.2rem !important;
+}
+
+.btn-more:hover {
+    background-color: #ffae00 !important;
+}
+
+
+
+.section-bio-title {
+    font-family: 'Maghribi', sans-serif !important;
+    color: #1877F2 !important;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #1877F2;
+}
+
+.bio-row {
+    display: flex;
+    text-overflow: hide;
+}
+
+.bio-img {
+    height: auto;
+    width: 60%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.bio-col-txt, .bio-col-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-txt {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: end;
+    font-family: 'Alexandria', sans-serif !important;
 }
