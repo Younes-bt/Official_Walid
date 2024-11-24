@@ -15,6 +15,11 @@ body {
     font-family: 'arabic-hand';
     src: url('./fonts/hand-arabic.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'arabic-pro';
+    src: url('./fonts/arabic-pro.ttf') format('truetype');
+}
 /* end Fonts*/
 
 .nav-fb:hover {
@@ -44,7 +49,7 @@ body {
 }
 
 .nav-link {
-    text-align: right !important;
+    text-align: center !important;
 }
 
 /* banner */ 
@@ -124,4 +129,64 @@ body {
 .banner-welcom-mobile {
     font-family: 'Maghribi', sans-serif;
     font-size: 1.5rem !important;
+}
+
+
+/* section-articles */
+
+.section-articles-title {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.section-title {
+    font-family: 'Maghribi', sans-serif !important;
+    color: orange !important;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #FB8500;
+}
+
+.card-img-lg {
+    height: 50dvh !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.cards-row {
+    max-height: 300px;
+}
+
+.articles-card {
+    background-color: #1877F2;
+}
+
+.car-icons {
+    background-color: #1877F2 !important;
+    border-radius: 100%;
+}
+
+.articles-car {
+    height: 30dvh !important;
+}
+
+.card-txt-lg {
+   background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgba(255, 255, 255, 0) 
+);
+    color: #f1f1f1;
+    height: auto;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.card-title {
+    font-family: 'arabic-pro', sans-serif !important;
+
 }
