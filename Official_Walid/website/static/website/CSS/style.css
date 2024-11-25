@@ -1,5 +1,6 @@
 body {
     max-width: 100vw !important;
+    background-color: azure !important;
 }
 
 /* fonts */
@@ -132,8 +133,25 @@ body {
 }
 
 
+.section-whoarewe {
+    padding: 3rem 1rem !important;
+}
+
 /* section-articles */
 
+.section-articles {
+    background-color: #ffffff !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    margin-bottom: 2rem;
+}
+
+.section-videos {
+    background-color: #ffffff !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    margin-bottom: 2rem;
+}
 
 .section-articles-title, .section-bio {
     display: flex !important;
@@ -147,6 +165,8 @@ body {
     color: orange !important;
     font-size: 2.5rem;
     border-bottom: 3px solid #FB8500;
+    margin-bottom: 1rem !important;
+    
 }
 
 .card-img-lg {
@@ -168,9 +188,7 @@ body {
     border-radius: 100%;
 }
 
-.articles-car {
-    height: 30dvh !important;
-}
+
 
 .card-txt-lg {
    background: linear-gradient(

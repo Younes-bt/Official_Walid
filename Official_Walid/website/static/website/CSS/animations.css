@@ -25,8 +25,8 @@
 .bio-txt-mobile {
     animation: move-in-right linear;
     animation-timeline: view();
-    animation-range-start: 5%;
-    animation-range-end: 10%;
+    animation-range-start: 1%;
+    animation-range-end: 50%;
 }
 
 .bio-img-mobile {
