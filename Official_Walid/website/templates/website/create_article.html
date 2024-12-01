@@ -3,11 +3,11 @@
 {% block body %}
 
 <div class="container mt-5">
-    <h1>Create a New Article</h1>
+    <h1>قم بإضافة مقال جديد</h1>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">أضف المقال</button>
     </form>
 </div>
 

@@ -9,7 +9,12 @@ from django.contrib import messages
 
 
 def index(requst):
-    return render(requst, 'website/index.html')
+    artiles1 = Article.objects.all()[:3]
+    artiles2 = Article.objects.all()[3:6]
+    return render(requst, 'website/index.html', {
+        'articles1':artiles1,
+        'articles2':artiles2
+    })
 
 def articles_view(requst, id):
     article = Article.objects.get(pk=id)

@@ -6,7 +6,7 @@ class ArticleForm(forms.ModelForm):
         model = Article
         fields = ['title', 'imgUrl', 'content']  # Exclude 'author' and 'created_at' as they are set programmatically
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter title'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'ضع العنوان هنا'}),
             'imgUrl': forms.FileInput(attrs={'class': 'form-control'}),
-            'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Write your content here'}),
+            'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'انسخ المقال هنا'}),
         }
