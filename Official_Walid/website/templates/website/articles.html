@@ -1,0 +1,8 @@
+{% extends 'website/layout.html' %}
+
+{% block body %}
+<img src="{{ article.imgUrl.url }}" alt="{{ article.title }}" class="img-fluid">
+<h1> {{article.title}} </h1>
+<p> {{content|safe}} </p>
+
+{% endblock %}
