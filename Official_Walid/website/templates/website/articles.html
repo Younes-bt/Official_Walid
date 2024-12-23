@@ -1,8 +1,22 @@
 {% extends 'website/layout.html' %}
 
 {% block body %}
-<img src="{{ article.imgUrl.url }}" alt="{{ article.title }}" class="img-fluid">
-<h1> {{article.title}} </h1>
-<p> {{content|safe}} </p>
+<div class="container arricle-view-container">
+    <h1 class="article-view-title"> {{article.title}} </h1>
+    <div class="row article-view-infos ">
+        <div class="col d-flex justify-content-end fs-5 article-view-infos-col">
+            <p>نشر هذا المقال بالمجلة العلمية  <span class="text-danger">{{ article.magazin }}</span></p>  
+        
+            <span><span class="text-danger"> {{ article.puplished_day }} </span> بتاريخ </span>
+        </div>
+    </div>
+<iframe src="https://drive.google.com/file/d/{{ article.pdfID }}/preview" width="100%" height="600px" title="المقال هنا" class="article-view-iframe"></iframe>
+<h3 class="article-view-title">يمكنكم تحميل هذا المقال عن عن طريق الضغط على زر التحميل</h3>
+    <div class="row justify-content-center d-flex mb-3">
+        <a href="https://drive.google.com/uc?export=download&id={{ article.pdfID }}">
+            <button class="btn btn-primary w-100 justify-content-center mb-3">تحميل</button>
+        </a>
+    </div>
+</div>
 
 {% endblock %}

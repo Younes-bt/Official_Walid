@@ -9,8 +9,9 @@ from django.contrib import messages
 
 
 def index(requst):
-    artiles1 = Article.objects.all()[:3]
-    artiles2 = Article.objects.all()[3:6]
+    articles = Article.objects.all().order_by('-created_at')
+    artiles1 = articles[:3]
+    artiles2 = articles[3:6]
     return render(requst, 'website/index.html', {
         'articles1':artiles1,
         'articles2':artiles2

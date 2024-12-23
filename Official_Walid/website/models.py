@@ -5,13 +5,23 @@ User = get_user_model()
 
 # Create your models here.
 
+class Article_category(models.Model):
+    title = models.CharField(max_length=500, null=False, blank=False)
 
+    def __str__(self):
+        return self.title
 
 class Article(models.Model):
     title = models.CharField(max_length=500, null=False, blank=False)
     imgUrl = CloudinaryField('image', blank=True, null=True)
-    content = models.TextField(null=False, blank=False)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="author")
+    content = models.TextField(null=True, blank=True)
+    category = models.ForeignKey(Article_category, on_delete=models.CASCADE, null=True, blank=True)
+    pdfID = models.CharField(max_length=500, null=True, blank=True)
+    pdfUrlView = models.CharField(max_length=1500, null=True, blank=True)
+    pdfUrlDownload = models.CharField(max_length=1500, null=True, blank=True)
+    magazin = models.CharField(max_length=1500, null=True, blank=True)
+    puplished_day = models.DateField(null=True, blank=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="article_author")
     created_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):

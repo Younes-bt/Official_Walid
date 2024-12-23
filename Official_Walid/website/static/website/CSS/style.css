@@ -253,3 +253,27 @@ body {
     text-align: end;
     font-family: 'Alexandria', sans-serif !important;
 }
+
+
+.article-view-title {
+    font-family: 'Alexandria', sans-serif !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+}
+
+.article-view-iframe {
+    border-radius: 1rem;
+    border: 1rem solid #FB8500;
+    height: 80dvh !important;
+}
+
+.article-view-infos {
+    font-family: 'Alexandria', sans-serif !important;;
+}
+
+.article-view-infos-col {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
