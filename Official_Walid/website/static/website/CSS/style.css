@@ -220,6 +220,7 @@ body {
     font-family: 'Alexandria', sans-serif !important;
     color: #f1f1f1 !important;
     font-size: 1.2rem !important;
+    border-radius: 2rem !important;
 }
 
 .btn-more:hover {
@@ -283,4 +284,39 @@ body {
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
+}
+
+.form-create {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    background-color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 1rem !important;
+    padding: 2rem;
+    font-family: 'Alexandria', sans-serif;
+}
+
+.form-label {
+    margin-top: 1.5rem !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.create-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input-txt {
+    direction: rtl;
+    width: 100% !important;;
+}
+
+.form-title {
+    text-align: center !important;
+    justify-self: center;
 }

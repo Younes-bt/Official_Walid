@@ -1,15 +1,32 @@
 {% extends 'website/layout.html' %}
-
+{% load static %}
 {% block body %}
 
-<div class="container mt-5">
+
+<div class="container mt-5 create-page">
     
-    <h1>قم بإضافة مقال جديد</h1>
-    <form method="POST" enctype="multipart/form-data">
+    <form action="{%url 'create_article' %}" method="POST" enctype="multipart/form-data" class="form-create w-50">
+        <h1 class="form-title m-auto">إضافة مقال جديد</h1>
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">أضف المقال</button>
+        <!-- <label for="artcile_title" class="form-label">
+            عنوان المقال: 
+        </label>
+        <input type="text" name="title" id="artcile_title" class="form-control form-input" aria-describedby="titleHelp">
+        <div id="titleHelp" class="form-text">ضع عنوان المقال هنا</div> -->
+        <label for="artcile_title" class="form-label">
+            عنوان المقال: 
+        </label>
+        {{form.title}}
+
+        <label for="article-cat" class="form-label">نوع المقال:</label>
+        {{form.category}}
+
+        <label for="article-cat" class="form-label" id="label-id">رابط الملف:</label>
+        {{form.pdfID}}
+        <button type="submit" class="btn btn-primary w-100 mt-5">أضف المقال</button>
     </form>
 </div>
+
+<script src="{% static 'website/JS/scripts-new-article.js' %}"></script>
 
 {% endblock %}
