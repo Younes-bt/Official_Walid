@@ -19,10 +19,13 @@ def index(requst):
 
 def articles_view(requst, id):
     article = Article.objects.get(pk=id)
+    pdfID = article.pdfID
+    pdfID = pdfID.split('/')[5]
     html_content = markdown2.markdown(article.content)
     return render(requst, 'website/articles.html', {
         'article' : article,
         'content' : html_content,
+        'pdfid' : pdfID,
     })
 
 @login_required

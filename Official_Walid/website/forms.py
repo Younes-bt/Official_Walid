@@ -20,10 +20,10 @@ class ArticleForm(forms.ModelForm):
             'category': forms.Select(attrs={'class': 'form-control', 'placeholder': 'نوع المقال', 'id':'article-cat'}),
             'title': forms.TextInput(attrs={'class': 'form-control form-input-txt', 'placeholder': 'ضع العنوان هنا', 'id':'artcile_title'}),
             'imgUrl': forms.FileInput(attrs={'class': 'form-control', 'placeholder': 'ضع العنوان هنا'}),
-            'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': ' PDF قم بكتابة المقال هنا إذا كان اختيارك كتابة مقال حصري للموقع أو قم بنسخ روابط الملف في الخيارات أسفله إذا كان المقال منشور في مجلة على شكل ملف'}),
+            'content': forms.Textarea(attrs={'class': 'form-control', 'id':'artcile_content', 'placeholder': ' PDF قم بكتابة المقال هنا إذا كان اختيارك كتابة مقال حصري للموقع أو قم بنسخ روابط الملف في الخيارات أسفله إذا كان المقال منشور في مجلة على شكل ملف'}),
             'pdfID': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'ضع هنا رابط الملف PDF - ID', 'id':'article-id'}),
             'pdfUrlView': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'ضع هنا رابط الملف PDF'}),
             'pdfUrlDownload': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'ضع هنا رابط تحميل الملف PDF'}),
-            'magazin': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'المجلة الناشرة للمقال'}),
-            'puplished_day': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'})
+            'magazin': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'المجلة الناشرة للمقال', 'id':'magazin-id'}),
+            'puplished_day': forms.DateInput(attrs={'class': 'form-control', 'type': 'date', 'id':'puplished_day-id'})
         }
