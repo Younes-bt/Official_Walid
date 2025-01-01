@@ -11,7 +11,7 @@
             </div>
             <div class="row d-flex">
                 {% for article in articles %}
-                <div class="col-12 col-lg-4 p-2">
+                <div class="col-12 col-lg-4 p-2 order-last order-lg-first d-none d-lg-flex">
                     <div class="card m-2 w-100 card-all">
                         <a href="{% url 'articles' article.id %}">
                             <img src="{{ article.imgUrl.url }}" class="card-img-lg" alt="...">
@@ -26,9 +26,23 @@
                 </div>
                 {% endfor %}
 
+                {% for article in articles %}
+                <div class="col-12 col-lg-4 order-last order-lg-first d-flex d-lg-none bg-white mt-2 py-2 w-100">
+                    <a href="{% url 'articles' article.id %}" class="card-articles-phone d-flex">
+                        <div class="col-9">
+                            <h5 class="card-title-phone text-center"> {{ article.title }}
+                            </h5>
+                        </div>
+                        <div class="col-3">
+                            <img src="{{ article.imgUrl.url }}" class="card-img-phone" alt="صورة المقال">
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+
             </div>
         </div>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4 order-first order-lg-last">
             <div class="row d-flex flex-column">
                 <div class="col bg-white rounded rounded-3 text-center col-search">
                     <form action="{% url 'all_articles' %}" method="POST">

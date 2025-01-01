@@ -57,14 +57,20 @@
                     </div>
                     <div class="col-12 col-md-6 bio-col-txt">
                         <p class="bio-txt mt-2 bio-txt-mobile">
-                            <span class="mb-4">أرحب بكم في منصتي العلمية الرسمية. </span>
-                            <span class="mb-4">أنا الدكتور وليد موحن، باحث مغربي متخصص في التاريخ المعاصر، مع تركيز خاص على دراسات الحماية الإسبانية بالمغرب. حصلت على الإجازة في التاريخ والحضارة، والإجازة المهنية في تدريس التاريخ والجغرافيا، وأواصل حالياً أبحاثي لنيل درجة الدكتوراه.
+                            <span class="mb-4">مرحبا بكم في منصتي العلمية الرسمية. </span>
+                            <span class="mb-4">أنا <strong>الباحث وليد موحن</strong>، باحث مغربي متخصص في التاريخ
+                                المعاصر، مع تركيز خاص على دراسات الحماية الإسبانية بالمغرب. حصلت على الإجازة في التاريخ
+                                والحضارة، والإجازة المهنية في تدريس التاريخ والجغرافيا، وأواصل حالياً أبحاثي لنيل درجة
+                                الدكتوراه.
                             </span>
                             <span class="mb-4">
-                                يتمحور اهتمامي البحثي حول العلاقات التجارية والثقافية في شمال المغرب. أشارك بانتظام في المؤتمرات الدولية وأنشر أبحاثاً أكاديمية محكمة. كما أدير "صفحة الباحث وليد موحن التاريخية" التي تعد منصة رقمية لنشر المعرفة التاريخية.
+                                يتمحور اهتمامي البحثي حول العلاقات التجارية والثقافية في شمال المغرب. أشارك بانتظام في
+                                المؤتمرات الدولية وأنشر أبحاثاً أكاديمية محكمة. كما أدير "صفحة الباحث وليد موحن
+                                التاريخية" التي تعد منصة رقمية لنشر المعرفة التاريخية.
                             </span>
                             <span class="mb-4">
-                                يضم هذا الموقع مجموعة من أبحاثي ودراساتي التي تسهم في إثراء المكتبة التاريخية المغربية والعربية. أدعوكم لاستكشاف محتوى الموقع والاستفادة من نتاج بحثي الأكاديمي.
+                                يضم هذا الموقع مجموعة من أبحاثي ودراساتي التي تسهم في إثراء المكتبة التاريخية المغربية
+                                والعربية. أدعوكم لاستكشاف محتوى الموقع والاستفادة من نتاج بحثي الأكاديمي.
                             </span>
 
                         </p>
@@ -139,7 +145,7 @@
 
                 </div>
                 <div class="row articles-car articles-large d-flex d-lg-none">
-                    <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div id="cardCarousel-phone" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             {% for article in articles1 %}
                             <a href="{% url 'articles' article.id %}">
@@ -147,7 +153,7 @@
                                     <div class="d-flex">
                                         <div class="card m-2 w-100">
                                             <img src="https://res.cloudinary.com/daeuundyc/image/upload/v1732417607/Walid_Project/syt2cs2chj2quwrb4mv3.jpg"
-                                                class="card-img-lg" alt="...">
+                                                class="card-img-lg" alt="صورة المقال">
                                             <div class="card-img-overlay card-txt-lg">
                                                 <h5 class="card-title text-center"> {{ article.title }}
                                                 </h5>
@@ -160,11 +166,13 @@
                             </a>
                             {% endfor %}
 
-                            <a class="carousel-control-prev" href="#cardCarousel" role="button" data-bs-slide="prev">
+                            <a class="carousel-control-prev" href="#cardCarousel-phone" role="button"
+                                data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon car-icons" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#cardCarousel" role="button" data-bs-slide="next">
+                            <a class="carousel-control-next" href="#cardCarousel-phone" role="button"
+                                data-bs-slide="next">
                                 <span class="carousel-control-next-icon car-icons" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </a>
@@ -172,7 +180,9 @@
 
                     </div>
                     <div class="btn-div d-flex justify-content-center">
-                        <div class="btn btn-more w-75">إطلع على جميع المقالات</div>
+                        <a href="{% url 'all_articles' %}" class="btn w-100">
+                            <button type="button" class="btn btn-more w-100">إطلع على جميع المقالات</button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -307,10 +317,10 @@
 
 
                 <div class="row articles-car articles-large d-flex d-lg-none">
-                    <div id="cardCarousel-video" class="carousel slide" data-bs-ride="carousel">
+                    <div id="cardCarousel-video-phone" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
+                            {% for video in videos2 %}
                             <div class="carousel-item active">
-                                {% for video in videos2 %}
                                 <div class="d-flex">
 
                                     <div class="card m-2 w-100">
@@ -359,16 +369,18 @@
                                     </div>
 
                                 </div>
-                                {% endfor %}
                             </div>
+                            {% endfor %}
 
 
                         </div>
-                        <a class="carousel-control-prev" href="#cardCarousel-video" role="button" data-bs-slide="prev">
+                        <a class="carousel-control-prev" href="#cardCarousel-video-phone" role="button"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon car-icons" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#cardCarousel-video" role="button" data-bs-slide="next">
+                        <a class="carousel-control-next" href="#cardCarousel-video-phone" role="button"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon car-icons" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </a>

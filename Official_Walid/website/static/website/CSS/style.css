@@ -375,3 +375,20 @@ body {
     margin-top: .5rem;
     direction: rtl;
 }
+
+.card-img-phone {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+.card-title-phone {
+    font-family: 'Alexandria', sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.card-articles-phone {
+    text-decoration: none;
+    color: #000;
+}
