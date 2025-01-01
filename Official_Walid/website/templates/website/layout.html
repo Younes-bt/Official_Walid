@@ -68,6 +68,9 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'create_article' %}"> أضف مقال </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'create_video' %}"> أضف فيديو </a>
+                    </li>
                     {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">تواصل معنا</a>
@@ -79,7 +82,7 @@
                         <a class="nav-link" aria-current="page" href="#section-Videos">المرئيات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#section-articles">المقالات</a>
+                        <a class="nav-link" aria-current="page" href="{%url 'all_articles'%}">المقالات</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#section-whoarewe">السيرة الداتية</a>
@@ -94,6 +97,17 @@
 
     {% block body %}
     {% endblock %}
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+
+            </div>
+            <div class="row copyrights-barr bg-dark">
+                <h3 class="copyrights-text">جميع الحقوق محفوظة للموقع الرسمي للباحث وليد موحن - 2025  © | تم التصميم و التطوير بواسطة : OpiCom Tech</h3>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

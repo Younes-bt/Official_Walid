@@ -1,5 +1,5 @@
 /* define animations */
-
+/* 
 @keyframes fade-in {
     from {opacity: 0.1;}
     to {opacity: 1;}
@@ -17,8 +17,8 @@
 
 
 
-/* applying */
-.banner, .banner-mobile {
+applying */
+/* .banner, .banner-mobile {
     animation: fade-in 1s ease-in ;
 }
 
@@ -48,4 +48,4 @@
     animation-timeline: view();
     animation-range-start: 5%;
     animation-range-end: 50%;
-}
+} */

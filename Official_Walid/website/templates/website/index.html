@@ -36,42 +36,43 @@
 </section>
 
 
-<section class="container section-whoarewe section-card mt-3" id="section-whoarewe">
-    <div class="col-12 section-bio">
-        <h1 class="section-bio-title">كلمة الباحث وليد موحن الترحيبية</h1>
-    </div>
 
-    <div class="row bio-row">
-        <div class="col-12 col-md-6 bio-col-img">
-            <img src="https://res.cloudinary.com/daeuundyc/image/upload/v1732453816/Walid_Project/ygbdrkgcxwvc15obsroi.jpg"
-                class="bio-img bio-img-mobile" alt="Walid-mouhan-reading-a-book">
-        </div>
-        <div class="col-12 col-md-6 bio-col-txt">
-            <p class="bio-txt mt-2 bio-txt-mobile">
-                وليد موحن هو باحث مغربي متخصص في دراسة التاريخ الحديث والمعاصر، مع اهتمام خاص بتاريخ شمال المغرب خلال
-                الفترة الاستعمارية والحماية. تُركز أبحاثه على فهم العلاقة بين القوى الاستعمارية والمغرب، خصوصًا في سياق
-                الحماية الإسبانية والفرنسية، وتأثيرها على الأوضاع السياسية والاقتصادية والاجتماعية في البلاد.
 
-                يتميز الباحث بتناول قضايا معقدة مثل الثورات الشعبية، مثل ثورة بوحمارة، وتأثير القروض الأجنبية في إضعاف
-                السيادة المغربية قبيل فرض الحماية. كما يستكشف مسارات الحركة الوطنية المغربية، ودورها في مقاومة الاحتلال
-                واستعادة السيادة الوطنية، مع تسليط الضوء على الأحداث الكبرى التي ساهمت في تشكيل المشهد التاريخي لشمال
-                المغرب.
-
-                إلى جانب اهتمامه بالتاريخ المحلي، يقدم وليد موحن مساهمات مميزة في مجال فلسفة التاريخ، حيث يناقش تطور
-                النظريات التاريخية الكبرى مثل نظرية ابن خلدون عن تعاقب الحضارات، ونظريات ماركس وهيغل حول الحراك
-                التاريخي. تتمحور جهوده حول نقد وتحليل هذه النظريات، وتوظيفها لفهم أعمق لديناميكيات التاريخ المغربي.
-
-                من خلال كتاباته وأبحاثه، يسعى وليد موحن إلى توثيق وتحليل التراث التاريخي المغربي من منظور أكاديمي حديث،
-                لإثراء المعرفة وإبراز الهوية المغربية التاريخية
-            </p>
-        </div>
-    </div>
-</section>
 
 
 <div class="container">
+
     <div class="row">
         <div class="col-12 col-lg-12">
+            <!-- Welcom Message -->
+            <section class="container section-whoarewe section-card mt-3" id="section-whoarewe">
+                <div class="col-12 section-bio">
+                    <h1 class="section-bio-title">كلمة ترحيبية</h1>
+                </div>
+
+                <div class="row bio-row">
+                    <div class="col-12 col-md-6 bio-col-img">
+                        <img src="https://res.cloudinary.com/daeuundyc/image/upload/v1732453816/Walid_Project/ygbdrkgcxwvc15obsroi.jpg"
+                            class="bio-img bio-img-mobile" alt="Walid-mouhan-reading-a-book">
+                    </div>
+                    <div class="col-12 col-md-6 bio-col-txt">
+                        <p class="bio-txt mt-2 bio-txt-mobile">
+                            <span class="mb-4">أرحب بكم في منصتي العلمية الرسمية. </span>
+                            <span class="mb-4">أنا الدكتور وليد موحن، باحث مغربي متخصص في التاريخ المعاصر، مع تركيز خاص على دراسات الحماية الإسبانية بالمغرب. حصلت على الإجازة في التاريخ والحضارة، والإجازة المهنية في تدريس التاريخ والجغرافيا، وأواصل حالياً أبحاثي لنيل درجة الدكتوراه.
+                            </span>
+                            <span class="mb-4">
+                                يتمحور اهتمامي البحثي حول العلاقات التجارية والثقافية في شمال المغرب. أشارك بانتظام في المؤتمرات الدولية وأنشر أبحاثاً أكاديمية محكمة. كما أدير "صفحة الباحث وليد موحن التاريخية" التي تعد منصة رقمية لنشر المعرفة التاريخية.
+                            </span>
+                            <span class="mb-4">
+                                يضم هذا الموقع مجموعة من أبحاثي ودراساتي التي تسهم في إثراء المكتبة التاريخية المغربية والعربية. أدعوكم لاستكشاف محتوى الموقع والاستفادة من نتاج بحثي الأكاديمي.
+                            </span>
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- last articles -->
             <section class="container-fluid section-articles" id="section-articles">
                 <div class="col-12 section-articles-title">
                     <h1 class="section-title">أخر المقالات</h1>
@@ -80,44 +81,44 @@
                     <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-            
+
                                 <div class="d-flex">
                                     {% for article in articles1 %}
-                                    
-                                        <div class="card m-2 w-50">
-                                            <a href="{% url 'articles' article.id %}">
+
+                                    <div class="card m-2 w-50">
+                                        <a href="{% url 'articles' article.id %}">
                                             <img src="{{ article.imgUrl.url }}" class="card-img-lg" alt="...">
                                             <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
                                                 <h5 class="card-title text-center"> {{ article.title }}
                                                 </h5>
-            
+
                                                 <p class="card-text"><small>{{ article.created_at }}</small></p>
-                                            
+
                                             </div>
                                         </a>
-                                        </div>
-                                    
+                                    </div>
+
                                     {% endfor %}
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="d-flex">
                                     {% for article in articles2 %}
-                                    
+
                                     <div class="card m-2 w-50">
                                         <a href="{% url 'articles' article.id %}">
-                                        <img src="{{ article.imgUrl.url }}" class="card-img-lg" alt="...">
-                                        <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> {{ article.title }}
-                                            </h5>
-            
-                                            <p class="card-text"><small>{{ article.created_at }}</small></p>
-                                        </div>
-                                    </a>
+                                            <img src="{{ article.imgUrl.url }}" class="card-img-lg" alt="...">
+                                            <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
+                                                <h5 class="card-title text-center"> {{ article.title }}
+                                                </h5>
+
+                                                <p class="card-text"><small>{{ article.created_at }}</small></p>
+                                            </div>
+                                        </a>
                                     </div>
-                                
+
                                     {% endfor %}
-            
+
                                 </div>
                             </div>
                         </div>
@@ -131,31 +132,34 @@
                         </a>
                     </div>
                     <div class="btn-div d-flex justify-content-center">
-                        <div class="btn btn-more w-75">إطلع على جميع المقالات</div>
+                        <a href="{% url 'all_articles' %}" class="btn w-75">
+                            <button type="button" class="btn btn-more w-75">إطلع على جميع المقالات</button>
+                        </a>
                     </div>
+
                 </div>
                 <div class="row articles-car articles-large d-flex d-lg-none">
                     <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             {% for article in articles1 %}
                             <a href="{% url 'articles' article.id %}">
-                            <div class="carousel-item active">
-                                <div class="d-flex">
-                                    <div class="card m-2 w-100">
-                                        <img src="https://res.cloudinary.com/daeuundyc/image/upload/v1732417607/Walid_Project/syt2cs2chj2quwrb4mv3.jpg"
-                                            class="card-img-lg" alt="...">
-                                        <div class="card-img-overlay card-txt-lg">
-                                            <h5 class="card-title text-center"> {{ article.title }}
-                                            </h5>
-            
-                                            <p class="card-text"><small> {{article.created_at}} </small></p>
+                                <div class="carousel-item active">
+                                    <div class="d-flex">
+                                        <div class="card m-2 w-100">
+                                            <img src="https://res.cloudinary.com/daeuundyc/image/upload/v1732417607/Walid_Project/syt2cs2chj2quwrb4mv3.jpg"
+                                                class="card-img-lg" alt="...">
+                                            <div class="card-img-overlay card-txt-lg">
+                                                <h5 class="card-title text-center"> {{ article.title }}
+                                                </h5>
+
+                                                <p class="card-text"><small> {{article.created_at}} </small></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
                             {% endfor %}
-            
+
                             <a class="carousel-control-prev" href="#cardCarousel" role="button" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon car-icons" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
@@ -165,7 +169,7 @@
                                 <span class="visually-hidden">Next</span>
                             </a>
                         </div>
-            
+
                     </div>
                     <div class="btn-div d-flex justify-content-center">
                         <div class="btn btn-more w-75">إطلع على جميع المقالات</div>
@@ -173,104 +177,117 @@
                 </div>
             </section>
 
+            <!-- last Videos -->
             <section class="container-fluid section-Videos section-card" id="section-Videos">
                 <div class="col-12 section-articles-title">
                     <h1 class="section-title">أخر الفيديوهات</h1>
                 </div>
-            
+
                 <div class="row articles-car articles-large d-none d-lg-flex h-100 px-5">
                     <div id="cardCarousel-video" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="d-flex">
+                                    {% for video in videos1 %}
+
                                     <div class="card m-2 w-50">
-                                        <iframe src="https://www.youtube.com/embed/6H4HkWnA54U?si=e8czkfJ3O09E9lIN"
+                                        <iframe src="https://www.youtube.com/embed/{{ video.vidLink|slice:'-11:' }}"
                                             class="card-img-lg" title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowfullscreen>
                                         </iframe>
                                         <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> من طريق الوحدة إلى طريق التنمية :محطة من محطات بناء
-                                                تاريخ المغرب الراهن. تقديم :ذ.وليد موحن.
-                                            </h5>
-            
-                                            <p class="card-text"><small>تمت الإضافة قبل 5 أيام</small></p>
+                                            <h5 class="card-title text-center"> {{video.title}} </h5>
+
+                                            <p class="card-text"><small>تمت الإضافة: {{video.created_at}}</small></p>
+                                            <button type="button" class="btn btn-modal-watch" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                شاهد الفيديو
+                                            </button>
+
                                         </div>
                                     </div>
-                                    <div class="card m-2 w-50">
-                                        <iframe src="https://www.youtube.com/embed/6H4HkWnA54U?si=e8czkfJ3O09E9lIN"
-                                            class="card-img-lg" title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen>
-                                        </iframe>
-                                        <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> من طريق الوحدة إلى طريق التنمية :محطة من محطات بناء
-                                                تاريخ المغرب الراهن. تقديم :ذ.وليد موحن.
-                                            </h5>
-            
-                                            <p class="card-text"><small>تمت الإضافة قبل 5 أيام</small></p>
+
+
+                                    <div class="modal fade w-100" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{video.title}}
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <iframe
+                                                        src="https://www.youtube.com/embed/{{ video.vidLink|slice:'-11:' }}"
+                                                        class="card-img-lg" title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen>
+                                                    </iframe>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">الرجوع</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="card m-2 w-50">
-                                        <iframe src="https://www.youtube.com/embed/6H4HkWnA54U?si=e8czkfJ3O09E9lIN"
-                                            class="card-img-lg" title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen>
-                                        </iframe>
-                                        <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> من طريق الوحدة إلى طريق التنمية :محطة من محطات بناء
-                                                تاريخ المغرب الراهن. تقديم :ذ.وليد موحن.
-                                            </h5>
-            
-                                            <p class="card-text"><small>تمت الإضافة قبل 5 أيام</small></p>
-                                        </div>
-                                    </div>
+
+                                    {% endfor %}
                                 </div>
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item active">
                                 <div class="d-flex">
+                                    {% for video in videos2 %}
+
                                     <div class="card m-2 w-50">
-                                        <iframe src="https://www.youtube.com/embed/6H4HkWnA54U?si=e8czkfJ3O09E9lIN"
+                                        <iframe src="https://www.youtube.com/embed/{{ video.vidLink|slice:'-11:' }}"
                                             class="card-img-lg" title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowfullscreen>
                                         </iframe>
                                         <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> من طريق الوحدة إلى طريق التنمية :محطة من محطات بناء
-                                                تاريخ المغرب الراهن. تقديم :ذ.وليد موحن.
-                                            </h5>
-            
-                                            <p class="card-text"><small>تمت الإضافة قبل 5 أيام</small></p>
+                                            <h5 class="card-title text-center"> {{video.title}} </h5>
+
+                                            <p class="card-text"><small>تمت الإضافة: {{video.created_at}}</small></p>
+                                            <button type="button" class="btn btn-modal-watch" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                شاهد الفيديو
+                                            </button>
+
                                         </div>
                                     </div>
-                                    <div class="card m-2 w-50">
-                                        <iframe src="https://www.youtube.com/embed/6H4HkWnA54U?si=e8czkfJ3O09E9lIN"
-                                            class="card-img-lg" title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen>
-                                        </iframe>
-                                        <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> من طريق الوحدة إلى طريق التنمية :محطة من محطات بناء
-                                                تاريخ المغرب الراهن. تقديم :ذ.وليد موحن.
-                                            </h5>
-            
-                                            <p class="card-text"><small>تمت الإضافة قبل 5 أيام</small></p>
+
+
+                                    <div class="modal fade w-100" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{video.title}}
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <iframe
+                                                        src="https://www.youtube.com/embed/{{ video.vidLink|slice:'-11:' }}"
+                                                        class="card-img-lg" title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen>
+                                                    </iframe>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">الرجوع</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="card m-2 w-50">
-                                        <iframe src="https://www.youtube.com/embed/6H4HkWnA54U?si=e8czkfJ3O09E9lIN"
-                                            class="card-img-lg" title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen>
-                                        </iframe>
-                                        <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> من طريق الوحدة إلى طريق التنمية :محطة من محطات بناء
-                                                تاريخ المغرب الراهن. تقديم :ذ.وليد موحن.
-                                            </h5>
-            
-                                            <p class="card-text"><small>تمت الإضافة قبل 5 أيام</small></p>
-                                        </div>
-                                    </div>
+
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
@@ -287,48 +304,65 @@
                         <div class="btn btn-more w-75">إطلع على جميع المرئيات</div>
                     </div>
                 </div>
-            
-            
+
+
                 <div class="row articles-car articles-large d-flex d-lg-none">
                     <div id="cardCarousel-video" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
+                                {% for video in videos2 %}
                                 <div class="d-flex">
+
                                     <div class="card m-2 w-100">
-                                        <iframe src="https://www.youtube.com/embed/6H4HkWnA54U?si=e8czkfJ3O09E9lIN"
+                                        <iframe src="https://www.youtube.com/embed/{{ video.vidLink|slice:'-11:' }}"
                                             class="card-img-lg" title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowfullscreen>
                                         </iframe>
                                         <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> من طريق الوحدة إلى طريق التنمية :محطة من محطات بناء
-                                                تاريخ المغرب الراهن. تقديم :ذ.وليد موحن.
-                                            </h5>
-            
-                                            <p class="card-text"><small>تمت الإضافة قبل 5 أيام</small></p>
+                                            <h5 class="card-title text-center"> {{video.title}} </h5>
+
+                                            <p class="card-text"><small>تمت الإضافة: {{video.created_at}}</small></p>
+                                            <button type="button" class="btn btn-modal-watch" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                شاهد الفيديو
+                                            </button>
+
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item ">
-                                <div class="d-flex">
-                                    <div class="card m-2 w-100">
-                                        <iframe src="https://www.youtube.com/embed/6H4HkWnA54U?si=e8czkfJ3O09E9lIN"
-                                            class="card-img-lg" title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen>
-                                        </iframe>
-                                        <div class="card-img-overlay card-txt-lg d-flex flex-wrap">
-                                            <h5 class="card-title text-center"> من طريق الوحدة إلى طريق التنمية :محطة من محطات بناء
-                                                تاريخ المغرب الراهن. تقديم :ذ.وليد موحن.
-                                            </h5>
-            
-                                            <p class="card-text"><small>تمت الإضافة قبل 5 أيام</small></p>
+
+
+                                    <div class="modal fade w-100" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{video.title}}
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <iframe
+                                                        src="https://www.youtube.com/embed/{{ video.vidLink|slice:'-11:' }}"
+                                                        class="card-img-lg" title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen>
+                                                    </iframe>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">الرجوع</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
+                                {% endfor %}
                             </div>
-            
+
+
                         </div>
                         <a class="carousel-control-prev" href="#cardCarousel-video" role="button" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon car-icons" aria-hidden="true"></span>
@@ -343,9 +377,9 @@
                         <div class="btn btn-more w-75">إطلع على جميع المرئيات</div>
                     </div>
                 </div>
-            
-            
-            
+
+
+
             </section>
         </div>
     </div>

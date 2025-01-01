@@ -320,3 +320,58 @@ body {
     text-align: center !important;
     justify-self: center;
 }
+
+.modal-title {
+    direction: rtl;
+    text-align: center;
+}
+
+.btn-modal-watch {
+    background-color: #FF0000 !important;
+    color: #FFFFFF !important;
+}
+
+.card-all:hover .card-text {
+    display: none;
+}
+
+#searchAll, .searchAll-text, .article-view-title, .article-view-infos-col {
+    direction: rtl;
+}
+
+.col-search {
+    font-family: 'Alexandria', sans-serif;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.article-infos {
+    background-color: #fff;
+    border-radius: 2rem;
+    font-size: 1.5rem !important;
+    padding-top: 2rem !important;
+}
+
+.article-resume {
+    font-family: 'Alexandria', sans-serif;
+    direction: rtl;
+    font-size: 1.1rem;
+}
+
+.copyrights-barr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.copyrights-text {
+    font-size: .7rem;
+    font-family: 'Alexandria', sans-serif;
+    color: #f1f1f1;
+    text-align: center;
+    margin-top: .5rem;
+    direction: rtl;
+}

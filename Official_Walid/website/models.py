@@ -20,9 +20,12 @@ class Article(models.Model):
     pdfUrlView = models.CharField(max_length=1500, null=True, blank=True)
     pdfUrlDownload = models.CharField(max_length=1500, null=True, blank=True)
     magazin = models.CharField(max_length=1500, null=True, blank=True)
+    resume = models.CharField(max_length=5000, null=True, blank=True)
     puplished_day = models.DateField(null=True, blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="article_author")
     created_at = models.DateTimeField(auto_now=True)
+    readCount = models.IntegerField(null=False, blank=False, default=0)
+    downloadCount = models.IntegerField(null=False, blank=False, default=0)
 
     def __str__(self):
         return f'{self.title} by {self.author.username}'

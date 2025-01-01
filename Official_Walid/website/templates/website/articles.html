@@ -6,26 +6,34 @@
         <h1 class="article-view-title"> {{article.title}} </h1>
         <div class="row article-view-infos ">
             <div class="col d-flex justify-content-end fs-5 article-view-infos-col">
-                <p>نشر هذا المقال بالمجلة العلمية  <span class="text-danger">{{ article.magazin }}</span></p>  
-            
+                <p>نشر هذا المقال بالمجلة العلمية <span class="text-danger">{{ article.magazin }}</span></p>
                 <span><span class="text-danger"> {{ article.puplished_day }} </span> بتاريخ </span>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-12 col-lg-8">
-            <iframe src="https://drive.google.com/file/d/{{ pdfid }}/preview" width="100%" height="800px" title="المقال هنا" class="article-view-iframe"></iframe>
+            <iframe src="https://drive.google.com/file/d/{{ pdfid }}/preview" width="100%" height="800px"
+                title="المقال هنا" class="article-view-iframe"></iframe>
         </div>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4 article-infos">
             <h3 class="article-view-title">يمكنكم تحميل هذا المقال عن عن طريق الضغط على زر التحميل</h3>
-                <div class="row justify-content-center d-flex mb-3">
-                    <a href="https://drive.google.com/uc?export=download&id={{ pdfid }}">
-                        <button class="btn btn-primary w-100 justify-content-center mb-3">تحميل</button>
-                    </a>
-                </div>
+            <div class="row justify-content-center d-flex mb-3">
+                <a href="https://drive.google.com/uc?export=download&id={{ pdfid }}">
+                    <button class="btn btn-primary w-100 justify-content-center mb-3">تحميل</button>
+                </a>
+            </div>
+            <hr>
+            <h3 class="article-view-title">الملخص : </h3>
+            {% if article.resume == None %}
+            <p class="article-resume">لا يوجد ملخص للمقال</p>
+            {% else %}
+            <p class="article-resume"> {{article.resume}} </p>
+            {% endif %}
+
         </div>
     </div>
-    
+
 </div>
 
 {% endblock %}
