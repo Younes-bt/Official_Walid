@@ -392,3 +392,33 @@ body {
     text-decoration: none;
     color: #000;
 }
+
+.footer {
+    background-image: url(https://res.cloudinary.com/daeuundyc/image/upload/v1732377418/Walid_Project/banner-background.png);
+    color: aliceblue !important;
+    font-family: 'Alexandria', sans-serif;
+    
+}
+
+.footer-logo-side {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #1877F2;
+}
+
+.footer-logo {
+    width: 60%;
+    object-fit: contain;
+}
+
+.footer-contact-side {
+    margin-top: 1rem !important;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

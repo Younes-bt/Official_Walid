@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from .models import Article, YoutubeVideos
+from .models import Article, YoutubeVideos, Message
 import markdown2
 from .forms import ArticleForm, YtbVids
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -90,3 +91,23 @@ def allArticles(request):
     return render(request, 'website/allArticles.html', {
         'articles':articles,
     })
+
+
+def send_message(request):
+    if request.method == 'POST':
+        author = request.POST.get('name', '').strip()
+        email_or_phone = request.POST.get('email_or_phone', '').strip()
+        content = request.POST.get('message', '').strip()
+
+        if not author or not email_or_phone or not content:
+            return HttpResponse("All fields are required.", status=400)
+
+        # Save the message to the database
+        message = Message.objects.create(
+            author=author,
+            email_or_phone=email_or_phone,
+            content=content
+        )
+        return redirect('index')
+    # If GET request, render a template or show an error
+    return HttpResponse("Invalid request method.", status=405)

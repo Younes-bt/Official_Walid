@@ -20,7 +20,7 @@ class Article(models.Model):
     pdfUrlView = models.CharField(max_length=1500, null=True, blank=True)
     pdfUrlDownload = models.CharField(max_length=1500, null=True, blank=True)
     magazin = models.CharField(max_length=1500, null=True, blank=True)
-    resume = models.CharField(max_length=5000, null=True, blank=True)
+    resume = models.TextField(max_length=5000, null=True, blank=True)
     puplished_day = models.DateField(null=True, blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="article_author")
     created_at = models.DateTimeField(auto_now=True)
@@ -48,3 +48,14 @@ class YoutubeVideos(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Message(models.Model):
+    author = models.CharField(max_length=300, null=False, blank=False)
+    email_or_phone = models.CharField(max_length=300, null=False, blank=False)
+    content = models.TextField(null=False, blank=False)
+    created_at = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self):
+        return f'{self.author}'
